@@ -1,0 +1,18 @@
+{ 
+    "manifest_version": 2,
+    "name": "AccessAbility", 
+    "description": "INSERT DES HERE", 
+    "version": "1.0", 
+    "permissions": [
+        "<all_urls>", 
+        "storage", 
+        "accessibilityFeatures.read", 
+        "accessibilityFeatures.modify"
+    ], 
+    "browser_action": 
+     {   "default_icon": "icon.png",
+         "default_popup": "index.html" },
+    "background": { 
+        "service worker": "background.js"
+    }
+}
