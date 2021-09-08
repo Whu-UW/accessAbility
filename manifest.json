@@ -10,7 +10,8 @@
         "accessibilityFeatures.modify"
     ], 
     "browser_action": 
-     { "default_popup": "index.html" },
+     {   "default_icon": "icon.png",
+         "default_popup": "index.html" },
     "background": { 
         "service worker": "background.js"
     }

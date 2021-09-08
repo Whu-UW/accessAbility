@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Select the features you'd like to use</title>
+    </head>
+    <style type="text/css">
+    body { 
+        margin: 5px; 
+    }
+    h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+    </style>
+    <body>
+        <input type="button" id="popupbutton" onclick="popup(this)"/>
+        <ul id="checkBundle">
+            <li><label><input type = "checkbox" id = "contrast"/>High Contrast Mode</label> <!--highContrast-->
+            <li><label><input type = "checkbox" id = "font"/>Increased Font Size</label> <!--screenMagnifier-->
+            <li><label><input type = "checkbox" id = "highlight" />Focus Highlighting</label> <!--focusHighlight-->
+            <li><label><input type = "checkbox" id = "voice"/>Voice Typing</label> <!--selectToSpeak-->
+            <li><label><input type = "checkbox" id = "reader" />Screen Reader</label> <!--dictation-->
+        </ul>
+    </body>
+</html>
