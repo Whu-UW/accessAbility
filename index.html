@@ -1,25 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Select the features you'd like to use</title>
-    </head>
-    <style type="text/css">
-    body { 
-        margin: 5px; 
-    }
-    h1 {
-        font-size: 15px;
-        text-align: center;
-    }
-    </style>
-    <body>
-        <input type="button" id="popupbutton" onclick="popup(this)"/>
-            <ul id="checkBundle">
-                <li><label><input type = "checkbox" id = "contrast"/>High Contrast Mode</label> <!--highContrast-->
-                <li><label><input type = "checkbox" id = "font"/>Increased Font Size</label> <!--screenMagnifier-->
-                <li><label><input type = "checkbox" id = "highlight" />Focus Highlighting</label> <!--focusHighlight-->
-                <li><label><input type = "checkbox" id = "voice"/>Voice Typing</label> <!--selectToSpeak-->
-                <li><label><input type = "checkbox" id = "reader" />Screen Reader</label> <!--dictation-->
-            </ul>
-    </body>
+
+	<head>
+		<center>
+			<link rel="stylesheet" href="styles.css">
+			<script type="module" src="script.js"></script>
+			<title>Text to Speech Machine</title>
+			<header>Text to Speech Machine<br><br></header>
+	</head>
+	
+	<style type="text/css">
+		body {
+			margin: 3px;
+			font-family: "Arial"; 
+		}
+
+		h1 {
+			font-size: 15px;
+			text-align: center;
+		}
+		
+		button {
+			    padding:20px;
+			    background-color:#6a67ce;
+			    border-color: ;
+			    color: #FFFFFF;
+			    border: 0px;
+			    cursor:pointer;
+			    border-radius: 5px;
+			    width: 150px;z
+			    height: 60px;
+			}
+		center {
+		    right: 50%;
+		    bottom: 65%;
+		    transform: translateX(50%) translateY(50%);
+		    position: absolute;
+		}
+	</style>
+
+	<body style="background-color: #E6E6FA; font-size: 50px">
+		<form>
+			<label for="given_text" id="label" style = "font-size: 22pt">Input a piece of text to have it read aloud!<br></label>
+			<div><input type="text" id="user_text" placeholder = "Enter text to speak..." style = "height: 55px; width: 500px; font-size: 30pt;"></div>
+			<button type="button" style = "font-size: 20pt" onclick="textToAudio()">Play Text</button>
+		</form>
+
+		</center>
+
+		<script>
+			
+			function textToAudio() {
+                let msg = document.getElementById("user_text").value;
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                
+                window.speechSynthesis.speak(speech);
+            }
+
+		</script>
+
+
+	</body>
+
+
 </html>
