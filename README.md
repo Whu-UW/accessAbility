@@ -1,4 +1,5 @@
 # accessAbility
+A Text to Speech Converter
 # Inspiration
 While researching disabilities, we found that dyslexia was a very common learning disability. After looking deeper into the needs of people with this condition, we decided to implement a text to speech machine that would allow dyslexic individuals to clarify phrases, sentences, or words that may have served as an obstacle in their learning. 
 # What it does
